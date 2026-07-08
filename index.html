@@ -91,6 +91,27 @@
         }
         .hero .btn:hover { background: #0056b3; transform: translateY(-2px); }
 
+        /* Trust Badges Section */
+        .trust-badges {
+            background: white;
+            padding: 20px 5%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            text-align: center;
+        }
+        .badge-item {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--dark);
+        }
+        .badge-item i {
+            color: var(--primary);
+            margin-right: 8px;
+        }
+
         /* Main Container */
         .container {
             max-width: 1200px;
@@ -198,6 +219,7 @@
             padding: 40px;
             max-width: 700px;
             margin: 0 auto;
+            margin-bottom: 60px;
         }
         .form-group { margin-bottom: 20px; }
         .form-group label {
@@ -240,14 +262,70 @@
         }
         .submit-btn:hover { background-color: #128C7E; transform: translateY(-1px); }
 
+        /* Policies Section styling */
+        .policies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .policy-box {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--primary);
+        }
+        .policy-box h3 {
+            margin-bottom: 12px;
+            color: var(--dark);
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .policy-box ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .policy-box ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #555;
+            position: relative;
+            padding-left: 15px;
+        }
+        .policy-box ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
         /* Footer */
         footer {
             background: var(--dark);
             color: #aaa;
             text-align: center;
-            padding: 30px;
+            padding: 40px 20px;
             margin-top: 60px;
             font-size: 14px;
+        }
+        footer .footer-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        footer .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        footer .footer-links a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -268,6 +346,7 @@
             <a href="#">Home</a>
             <a href="#fleet">Our Cars</a>
             <a href="#book">Book Tour</a>
+            <a href="#policies">Policies</a>
         </div>
     </header>
 
@@ -278,6 +357,14 @@
         <a href="#book" class="btn">Abhi Book Karein</a>
     </section>
 
+    <!-- 🛡️ Safety & Trust Icons Section -->
+    <div class="trust-badges">
+        <div class="badge-item"><i class="fa-solid fa-shield-halved"></i> Comprehensive Insured Cars</div>
+        <div class="badge-item"><i class="fa-solid fa-user-check"></i> CNIC + License Verified Drivers</div>
+        <div class="badge-item"><i class="fa-solid fa-headset"></i> 24/7 Roadside Assistance</div>
+        <div class="badge-item"><i class="fa-solid fa-location-crosshairs"></i> GPS Tracked Fleet</div>
+    </div>
+
     <div class="container">
         
         <!-- Fleet Section (Gaariyon ki List) -->
@@ -287,7 +374,6 @@
             <!-- Car 1: Honda City -->
             <div class="car-card">
                 <div class="car-img">
-                    <!-- 🖼️ UPDATE: Apni real pic 'images' folder mein daal kar naam match karein -->
                     <img src="images/honda-city.jpg" alt="Honda City">
                     <span class="car-badge">Sedan</span>
                 </div>
@@ -299,7 +385,7 @@
                         <span><i class="fa-solid fa-users"></i> 5 Seater</span>
                     </div>
                     <div class="car-price">
-                        <span>Best Rates</span>
+                        <span>✓ Insurance Included</span>
                         <a href="#book" class="book-link-btn">Book Now</a>
                     </div>
                 </div>
@@ -308,7 +394,6 @@
             <!-- Car 2: Suzuki Cultus -->
             <div class="car-card">
                 <div class="car-img">
-                    <!-- 🖼️ UPDATE: Apni real pic 'images' folder mein daal kar naam match karein -->
                     <img src="images/cultus.jpg" alt="Suzuki Cultus">
                     <span class="car-badge">Economy</span>
                 </div>
@@ -320,7 +405,7 @@
                         <span><i class="fa-solid fa-users"></i> 5 Seater</span>
                     </div>
                     <div class="car-price">
-                        <span>Best Rates</span>
+                        <span>✓ Insurance Included</span>
                         <a href="#book" class="book-link-btn">Book Now</a>
                     </div>
                 </div>
@@ -329,7 +414,6 @@
             <!-- Car 3: Suzuki Wagon R -->
             <div class="car-card">
                 <div class="car-img">
-                    <!-- 🖼️ UPDATE: Apni real pic 'images' folder mein daal kar naam match karein -->
                     <img src="images/wagon-r.jpg" alt="Suzuki Wagon R">
                     <span class="car-badge">Budget</span>
                 </div>
@@ -341,7 +425,7 @@
                         <span><i class="fa-solid fa-users"></i> 5 Seater</span>
                     </div>
                     <div class="car-price">
-                        <span>Best Rates</span>
+                        <span>✓ Insurance Included</span>
                         <a href="#book" class="book-link-btn">Book Now</a>
                     </div>
                 </div>
@@ -350,7 +434,6 @@
             <!-- Car 4: Suzuki Alto -->
             <div class="car-card">
                 <div class="car-img">
-                    <!-- 🖼️ UPDATE: Apni real pic 'images' folder mein daal kar naam match karein -->
                     <img src="images/alto.jpg" alt="Suzuki Alto">
                     <span class="car-badge">Fuel Saver</span>
                 </div>
@@ -362,7 +445,7 @@
                         <span><i class="fa-solid fa-users"></i> 4 Seater</span>
                     </div>
                     <div class="car-price">
-                        <span>Best Rates</span>
+                        <span>✓ Insurance Included</span>
                         <a href="#book" class="book-link-btn">Book Now</a>
                     </div>
                 </div>
@@ -418,7 +501,6 @@
                     </div>
                 </div>
 
-                <!-- 🆕 DUAL WHATSAPP OPTION HERE -->
                 <div class="form-group">
                     <label><i class="fa-solid fa-headset"></i> Select Booking Agent / Manager</label>
                     <select id="agentSelect" class="form-control" required>
@@ -439,11 +521,53 @@
             </form>
         </div>
 
+        <!-- 📄 Naya Section: Terms & Privacy Policies -->
+        <h2 class="section-title" id="policies">Our Company Policies</h2>
+        <div class="policies-grid">
+            
+            <!-- Terms & Conditions Box -->
+            <div class="policy-box" id="terms-section">
+                <h3><i class="fa-solid fa-file-contract"></i> Terms & Conditions</h3>
+                <ul>
+                    <li>Self-drive ke liye original CNIC aur Driving License lazmi jama karwana hoga.</li>
+                    <li>Security deposit booking ke waqt liya jayega jo gaari ki wapsi par refundable hai.</li>
+                    <li>Gaari jitne fuel par di jayegi, wapsi par utna hi fuel hona zaroori hai.</li>
+                    <li>Speed limit aur traffic rules ki khilaf-warzi par challan customer ko khud ada karna hoga.</li>
+                </ul>
+            </div>
+
+            <!-- Privacy Policy Box -->
+            <div class="policy-box" id="privacy-section">
+                <h3><i class="fa-solid fa-user-shield"></i> Privacy Policy</h3>
+                <ul>
+                    <li>Aapka CNIC, License, aur personal data hamare paas mukammal mehfooz hai.</li>
+                    <li>Hum customer ka record sirf security verification ke liye istemal karte hain.</li>
+                    <li>Aapka data kisi bhi teesri party ya marketing company ko share nahi kiya jata.</li>
+                </ul>
+            </div>
+
+            <!-- Refund Policy Box -->
+            <div class="policy-box" id="refund-section">
+                <h3><i class="fa-solid fa-hand-holding-dollar"></i> Refund Policy</h3>
+                <ul>
+                    <li>Booking se 24 ghante pehle cancel karne par full advance refund milega.</li>
+                    <li>Agar cancellation 24 ghante se kam waqt mein ki jaye, toh advance refund nahi hoga.</li>
+                    <li>Gaari mein raste mein koi technical kharabi aaye toh foran backup gaari di jayegi.</li>
+                </ul>
+            </div>
+
+        </div>
+
     </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 PakDrive Rentals. All rights reserved. | Best Car Rental Service in Pakistan.</p>
+        <div class="footer-links">
+            <a href="#terms-section">Terms & Conditions</a>
+            <a href="#privacy-section">Privacy Policy</a>
+            <a href="#refund-section">Refund Policy</a>
+        </div>
     </footer>
 
     <!-- JavaScript code -->
@@ -451,18 +575,17 @@
         function sendToWhatsApp(event) {
             event.preventDefault();
 
-            // ⚠️ 1. PEHLA WHATSAPP NUMBER IDHAR LIKHEIN (Country code ke sath)
+            // Pehla WhatsApp Number
             const numberManager1 = "923044155836"; 
 
-            // ⚠️ 2. DOOSRA WHATSAPP NUMBER IDHAR LIKHEIN (Country code ke sath)
+            // Doosra WhatsApp Number
             const numberManager2 = "923024623274"; 
 
-            // Pata karna ke customer ne kaunsa manager select kiya hai
             const selectedAgent = document.getElementById('agentSelect').value;
-            let finalWhatsAppNumber = numberManager1; // Default pehla number
+            let finalWhatsAppNumber = numberManager1;
 
             if(selectedAgent === "manager2") {
-                finalWhatsAppNumber = numberManager2; // Agar doosra chuna toh doosra number
+                finalWhatsAppNumber = numberManager2;
             }
 
             const name = document.getElementById('name').value;
@@ -476,16 +599,17 @@
             const pickupClean = pickup.replace("T", " Time: ");
             const dropoffClean = dropoff.replace("T", " Time: ");
 
-            const message = `*🚗 NAYI TOUR BOOKING REQ (%23PakDriveRentals)*%0A%0A` +
-                            `*Client Name:* ${name}%0A` +
-                            `*WhatsApp No:* ${phone}%0A%0A` +
-                            `*Selected Car:* ${car}%0A` +
-                            `*Service Mode:* ${serviceType}%0A%0A` +
-                            `*📅 Pickup Info:* ${pickupClean}%0A` +
-                            `*📅 Dropoff Info:* ${dropoffClean}%0A%0A` +
+            const message = `*🚗 NAYI TOUR BOOKING REQ (#PakDriveRentals)*\n\n` +
+                            `*Client Name:* ${name}\n` +
+                            `*WhatsApp No:* ${phone}\n\n` +
+                            `*Selected Car:* ${car}\n` +
+                            `*Service Mode:* ${serviceType}\n\n` +
+                            `*📅 Pickup Info:* ${pickupClean}\n` +
+                            `*📅 Dropoff Info:* ${dropoffClean}\n\n` +
                             `*🗺️ Tour Details:* ${tourDetails}`;
 
-            const whatsappURL = `https://api.whatsapp.com/send?phone=${finalWhatsAppNumber}&text=${message}`;
+            // URL safe encoding format
+            const whatsappURL = `https://api.whatsapp.com/send?phone=${finalWhatsAppNumber}&text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, '_blank');
         }
     </script>
